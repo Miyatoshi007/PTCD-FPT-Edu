@@ -149,6 +149,7 @@ header nav .search-bar {
     text-align: justify;
     line-height: 30px;
     font-size: 20px;
+    width: 100%;
 }
 
 .campus_1_text h1,
@@ -269,13 +270,17 @@ i {
 
 .search-icon {
     position: relative;
-    right: 55px;
+    right: 50px;
     bottom: 2px;
     cursor: pointer;
-    max-width: 32px;
-    max-height: 32px;
+    max-width: 27px;
+    max-height: 27px;
 }
 
 .search-icon:hover {
     scale: 115%;
 }
+
+@media only screen and (min-width: 1030px) and (max-width: 1366px) {}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}

@@ -168,15 +168,15 @@ header nav .search-bar {
 }
 
 .campus_1 img:hover {
-    box-shadow: -5px 5px 10px;
+    box-shadow: -5px 5px 10px rgba(55, 55, 55, 0.25);
     border-radius: 10px;
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
 .campus_2 img:hover {
-    box-shadow: 5px 5px 10px;
+    box-shadow: 5px 5px 10px rgba(55, 55, 55, 0.25);
     border-radius: 10px;
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
 .campus_1_text a,
@@ -282,11 +282,14 @@ i {
     scale: 115%;
 }
 
-@media only screen and (min-width: 1025px) and (max-width: 1366px) {
+@media (min-width: 1025px) and (max-width: 1366px) {
     header nav .menu ul li a {
         font-size: 15px;
         width: 100%;
         margin: 0 10px;
+    }
+    header img {
+        margin-left: 10px;
     }
     .search-bar input {
         height: 35px;
@@ -338,14 +341,14 @@ i {
     }
 }
 
-@media only screen and (min-device-width: 641px) and (max-device-width: 1024px) {
+@media (min-device-width: 641px) and (max-device-width: 1024px) {
     header nav .menu ul li a {
         font-size: 10px;
         width: 100%;
         margin: 0 10px;
     }
     .main_info {
-        margin: 45px 10px;
+        margin: 45px 10%;
     }
     .image img {
         width: 100%;
@@ -365,16 +368,34 @@ i {
     .search-icon {
         display: none;
     }
+    .campus_1,
+    .campus_2 {
+        flex-direction: column;
+        margin-top: 10px;
+    }
     .campus_1_text h1,
     .campus_2_text h1 {
-        font-size: 15px;
+        width: 100%;
+        text-align: center;
+        font-size: 20px;
         margin: 0 0 10px 0;
     }
     .campus_1_text p,
     .campus_2_text p {
         text-align: justify;
-        line-height: 15px;
-        font-size: 10px;
+        line-height: 20px;
+        font-size: 15px;
+        width: 100%;
+    }
+    .campus_1_text,
+    .campus_2_text {
+        order: 2;
+        width: 100%;
+        margin: 10px 0;
+    }
+    .campus_1 img,
+    .campus_2 img {
+        order: 1;
         width: 100%;
     }
     footer {
@@ -435,11 +456,21 @@ i {
     }
 }
 
-@media only screen and (min-device-width: 360px) and (max-device-width: 640px) {
+@media (min-device-width: 320px) and (max-device-width: 640px) {
     header nav .menu ul li a {
         font-size: 7px;
         width: 100%;
         margin: 0 7px;
+    }
+    .campus_1 img,
+    .campus_2 img {
+        order: 1;
+        width: 100%;
+    }
+    .campus_1,
+    .campus_2 {
+        flex-direction: column;
+        margin-top: 10px;
     }
     header {
         min-height: 30px;
@@ -465,19 +496,21 @@ i {
     }
     .campus_1_text,
     .campus_2_text {
+        order: 2;
         width: 100%;
-        padding: 0 5px;
     }
     .campus_1_text p,
     .campus_2_text p {
         text-align: justify;
-        line-height: 9px;
-        font-size: 7px;
+        line-height: 15px;
+        font-size: 10px;
         width: 100%;
     }
     .campus_1_text h1,
     .campus_2_text h1 {
-        font-size: 10px;
+        width: 100%;
+        text-align: center;
+        font-size: 15px;
         margin: 0 0 6px 0;
     }
     .left {
@@ -491,6 +524,9 @@ i {
     }
     .left p {
         font-size: 10px;
+    }
+    .statistics {
+        margin-top: 10px;
     }
     .right {
         margin: auto;
@@ -506,16 +542,20 @@ i {
     }
     .right h3 {
         margin: 10px 0;
-        font-size: 15px;
+        font-size: 10px;
     }
     .inbox {
         display: none;
+    }
+    iframe {
+        width: 100%;
+        height: 75px;
     }
     footer {
         flex-direction: column;
     }
     .main_info {
-        margin: 0 0;
+        margin: 0 10%;
     }
     .navigation_bar h4 {
         font-size: 10px;
